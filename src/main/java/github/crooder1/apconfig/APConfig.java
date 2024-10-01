@@ -41,7 +41,7 @@ public class APConfig {
     public APConfig(String filename) {
 
         // Get the path to .minecraft folder
-        String basePath = ((File)(FMLInjectionData.data()[6])).getAbsolutePath().replace(File.separatorChar, '/').replace("/.", "");
+        String basePath = ((File)(FMLInjectionData.data()[6])).getAbsolutePath().replace("/.", "").replace(File.separatorChar, '/');
 
         this.filename = filename;
         this.directory = new File(basePath + defaultConfigPath);
