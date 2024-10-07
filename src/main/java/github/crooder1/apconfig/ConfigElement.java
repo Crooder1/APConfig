@@ -64,6 +64,11 @@ public class ConfigElement<T> {
         }
     }
 
+    /**Saves the elements value to the config object.*/
+    public void saveElement() {
+        APConfig.getConfig().setValue(this);
+    }
+
     /**Get and set the value of this element from the config.*/
     public void updateValue() {
         if (this.config != null) this.value = convert(this.config.getValue(this));
@@ -77,7 +82,7 @@ public class ConfigElement<T> {
     /**Set the value of this element.*/
     public void setValue(T o) {
         this.value = o;
-        this.config.setValue(this);
+        saveElement();
     }
 
     /**GSet the value of this element to the default value.*/
