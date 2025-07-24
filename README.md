@@ -1,6 +1,3 @@
-https://markdownlivepreview.com/
-https://www.markdownguide.org/basic-syntax/
-
 # About
 
 APConfig is a standalone code package that gives developers access to an<br>
